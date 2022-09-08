@@ -13,7 +13,8 @@ vrseat = int(input ('Hoeveel minuten ga je in de gameseat:'))
 
 vrkosten = (vr * vrseat )
 
-totaalkosten = persons * ticket + vrkosten * persons
+kosten = persons * ticket + vrkosten
 
+totaalkosten = round (kosten, 2)
 
-print ('Dit geweldige dagje-uit met 4 mensen in de Speelhal met 45 minuten VR kost je maar',(totaalkosten), 'euro')
+print ('Dit geweldige dagje-uit met 4 mensen in de Speelhal met 45 minuten VR kost je maar',totaalkosten, 'euro')
