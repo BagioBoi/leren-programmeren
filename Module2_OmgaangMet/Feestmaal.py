@@ -13,7 +13,6 @@ kortingaantal = int(input ("Hoeveel kortingsbonnen heb je: "))
 korting = 0.50
 
 prijs = (croissantaantal * croissant) + (stokbroodaantal * stokbrood) - (kortingaantal * korting)
-afgeronde_prijs = round(prijs, 2)
+afgerondeprijs = round(prijs, 2)
 
-print ('De feestlunch kost je bij de bakker', afgeronde_prijs, 'euro voor de 17 croissantjes en de 2 stokbroden als de 3 kortingsbonnen nog geldig zijn')
-
+print ('De feestlunch kost je bij de bakker', afgerondeprijs, 'euro voor de 17 croissantjes en de 2 stokbroden als de 3 kortingsbonnen nog geldig zijn')
