@@ -7,8 +7,18 @@
 
 #int (input("Vul hier een getal voor a in"))
 
-a = 13
-b = int (input("Vul hier een getal voor b in"))
+a = int (input("Vul hier een getal voor a in: "))
+b = int (input("Vul hier een getal voor b in: "))
 
 if a > b:
     print ("a is groter dan b")
+    print (f"Het kleinste getal is {b}")
+    print (f"Het grootste getal is {a}")
+
+elif (a==b):
+    print ("a is gelijk aan b")
+
+else:
+    print ("b is groter dan a")
+    print (f"Het kleinste getal is {a}")
+    print (f"Het grootste getal is {b}")
