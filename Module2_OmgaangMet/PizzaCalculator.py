@@ -1,3 +1,4 @@
+
 #Pizza calculator
 #de klant kan een keuze maken uit 3 afmetingen pizza's, namelijk: small, medium en large. Voor elke afmeting wordt er gevraagd hoeveel pizza's de klant wil.
 #zoek op internet naar passende prijzen voor deze pizza afmetingen en noteer deze prijzen in je applicatie
@@ -14,8 +15,8 @@
 print ('''Welkom bij pizza emporium ChuckECheese
 De prijzen van de pizza's zijn als volgt
 Voor een small(cm 25) pizza kost het €7.99
-Voor een medium(cm 29) pizza kost het 12.49
-Voor een large(cm 35) pizza kost het 17.49''')
+Voor een medium(cm 29) pizza kost het €12.49
+Voor een large(cm 35) pizza kost het €17.49''')
 #Dit laat de prijzen zien voordat je de keuze maakt in je pizza
 
 small_pizza_prijs = 7.99
