@@ -23,25 +23,11 @@ elif praktijk_ervaring == '2':
 elif praktijk_ervaring == '3':
     acrobatiek = int(input("Hoeveel jaar ervaring heb je in acrobatiek?: " ))
 
-else:
-    pass    
+ervaring = (dieren_dressuur > 4) or (jongleren > 5) or (acrobatiek > 3)
 
-if (dieren_dressuur > 4) or (jongleren > 5) or (acrobatiek > 3):
-    dieren_dressuur = True
-    jongleren = True
-    acrobatiek = True
-    ervaring = dieren_dressuur or jongleren or acrobatiek
-else:
-    dieren_dressuur = False
-    jongleren = False
-    acrobatiek = False
-
-mbo = False
 mbo_antwoord = input("Heeft u een MBO diploma of hoger niveau? ja/nee: ")
 if mbo_antwoord == "ja":
     niveau = int(input("Welk MBO niveau heeft u behaald: "))
-    if niveau > 4:
-        mbo = True
 
 antwoord_vrachtwagen = input("Bent u in bezit van een vrachtwagen rijbewijs? ja/nee: ")
 vrachtwagen = antwoord_vrachtwagen == "ja"
@@ -52,28 +38,19 @@ linkshandig = input("Bent u linkshandig? ja/nee: ")
 antwoord_hoed = input("Bent u in bezit van een hoed? ja/nee: ")
 hoed = antwoord_hoed == "ja"
 
-gender = False
 gender = input("Bent u een man of vrouw? man/vrouw: ")
 if gender == "man":
     snor = input("Heeft u dan een snor? ja/nee: ")
     if snor == "ja":
         snor_breedte = int(input("Wat is de breedte van uw snor in cm?: "))
-        if snor_breedte > 10:
-            gender = True
 
-elif gender == "vrouw":
+else:
+    gender == "vrouw"
     rood_krulhaar = input("Heeft u rood krulhaar? ja/nee: ")
     if rood_krulhaar == "ja":
         lengte_haar = int(input("hoelang is uw haar in cm?: "))
-        if lengte_haar > 20:
-            gender = True
-
-else:
-    pass
 
 lengte = int(input("Hoelang bent u in cm?: "))
-if lengte > 150:
-    lengte = True
 
 huisdier = input("Heeft u huisdieren? ja/nee: ")
 if huisdier == "ja":
@@ -88,7 +65,7 @@ muizen_vanger = input("Heeft u het certificaat muizenvanger? ja/nee: ")
 antwoord_certificaat_ogp = input("Heeft u het certificaar overleven met gevaarlijk personeel? ja/nee: ")
 certificaat_ogp = antwoord_certificaat_ogp == "ja"
 
-if (ervaring and mbo and vrachtwagen and hoed and gender and lengte and huisdier and gewicht < 90 and certificaat_ogp == True):
+if (ervaring and (mbo_antwoord == "ja" and niveau > 4) and vrachtwagen and hoed and (gender == "man" and snor == "ja" and snor_breedte > 10) or (gender == "vrouw" and rood_krulhaar == "ja" and lengte_haar > 20) and lengte > 150 and gewicht < 90 and certificaat_ogp == True):
     print("Je bent gekwalificeerd voor de baan. Stuur zo snel mogelijk je CV op.")
 else: 
     print("je bent niet gekwalificeerd voor de baan.")

@@ -1,12 +1,3 @@
-#if gender == "man":
-#onthouden om later te gebruiken bij de differentiatie tussen man en vrouw
-
-print ('''Welkom bij de sollicitatie voor de positie circus directeur.
-Deze meeste vragen zijn gesloten vragen.
-Dit betekent dus dat je alleen ja of nee hoeft te antwoorden.
-!Let op het is hoofdletter gevoelig!''')
-
-
 praktijk_ervaring = input('''Heeft u ervaring in dieren-dressuur, jongleren of acrobatiek
 1 = dieren-dressuur
 2 = jongleren
