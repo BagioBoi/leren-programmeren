@@ -3,6 +3,10 @@ Deze meeste vragen zijn gesloten vragen.
 Dit betekent dus dat je alleen ja of nee hoeft te antwoorden.
 !Let op het is hoofdletter gevoelig!''')
 
+name = input("Wat is uw naam")
+if name == "Matthijs":
+        raise NameError("Dat kan nooit een echte naam zijn")
+
 praktijk_ervaring = input('''Heeft u ervaring in dieren-dressuur, jongleren of acrobatiek
 1 = dieren-dressuur
 2 = jongleren
@@ -33,7 +37,9 @@ antwoord_vrachtwagen = input("Bent u in bezit van een vrachtwagen rijbewijs? ja/
 vrachtwagen = antwoord_vrachtwagen == "ja"
 
 linkshandig = input("Bent u linkshandig? ja/nee: ")
-#Deze vraag gaat niks mee gedaan worden
+if linkshandig == "ja":
+    raise NameError("Linkshandige mensen bestaan niet")
+#Deze vraag moet met rechts worden beantwoord anders komt er een error
 
 antwoord_hoed = input("Bent u in bezit van een hoed? ja/nee: ")
 hoed = antwoord_hoed == "ja"
@@ -58,6 +64,8 @@ if huisdier == "ja":
 #weer een vraag waar niks gedaan mee wordt
 
 gewicht = int(input("Hoeveel weegt u in kg?: "))
+if gewicht >= 120:
+    raise NameError("U moet hoog nodig naar de sportschool")
 
 muizen_vanger = input("Heeft u het certificaat muizenvanger? ja/nee: ")
 #vraag waar niks gedaan mee wordt
