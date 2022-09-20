@@ -12,21 +12,42 @@
 #er is passend commentaar toegevoegd in de code
 #laat de uitkomst er uit zien als een bonnetje
 
-print ('''Welkom bij pizza emporium ChuckECheese
-De prijzen van de pizza's zijn als volgt
-Voor een small(cm 25) pizza kost het €7.99
-Voor een medium(cm 29) pizza kost het €12.49
-Voor een large(cm 35) pizza kost het €17.49''')
-#Dit laat de prijzen zien voordat je de keuze maakt in je pizza
+from ast import Break
 
 small_pizza_prijs = 7.99
 medium_pizza_prijs = 12.49
 large_pizza_prijs = 17.49
 #De prijzen van de pizza's
 
-small_pizza = float (input("Hoeveel small pizza(s) wil je bestellen: "))
-medium_pizza = float (input ("Hoeveel medium pizza(s) wil je bestellen: "))
-large_pizza = float (input ("Hoeveel large pizza(s) wil je bestellen: "))
+print (f'''Welkom bij pizza emporium ChuckECheese
+De prijzen van de pizza's zijn als volgt
+Voor een small(cm 25) pizza kost het €{small_pizza_prijs}
+Voor een medium(cm 29) pizza kost het €{medium_pizza_prijs}
+Voor een large(cm 35) pizza kost het €{large_pizza_prijs}''')
+#Dit laat de prijzen zien voordat je de keuze maakt in je pizza
+
+
+
+while True:
+    try:
+        small_pizza = float(input("Hoeveel small pizza(s) wil je bestellen: "))
+        break
+    except:
+        print ("Dat is geen geldig nummer.")
+
+while True:
+    try:
+        medium_pizza = float (input ("Hoeveel medium pizza(s) wil je bestellen: "))
+        break
+    except:
+        print ("Dat is geen geldig nummer")
+
+while True:
+    try:
+        large_pizza = float (input ("Hoeveel large pizza(s) wil je bestellen: "))
+        break
+    except:
+        print ("Dat is geen geldig nummer")
 #De input van de aantal pizza's die iemand wilt
 
 small_cost = small_pizza_prijs * small_pizza 
