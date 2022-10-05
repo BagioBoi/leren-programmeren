@@ -26,12 +26,12 @@ Voor een medium(cm 29) pizza kost het €{medium_pizza_prijs}
 Voor een large(cm 35) pizza kost het €{large_pizza_prijs}''')
 #Dit laat de prijzen zien voordat je de keuze maakt in je pizza
 
+input_empty = True
 
-
-while True:
+while input_empty:
     try:
         small_pizza = float(input("Hoeveel small pizza(s) wil je bestellen: "))
-        break
+        input_empty = False
     except:
         print ("Dat is geen geldig nummer.")
 
