@@ -26,17 +26,20 @@ time.sleep(5)
 while True:
     avond = input('''Het verhaal begint 's avonds laat je hebt de keuze om te gaan slapen of om een stream van je favoriete streamer mee te pakken.
     Aan jou is de vraag wat doe je ''')
-
-    if avond in ["stream", "kijk stream", "ga stream", "bekijk stream"]:
-        print('''Je bekijkt de stream tot diep in de nacht totdat je van vermoeidheid in slaap viel. Je wordt met paniek wakker en schrikt op uit bed. je kijkt op je wekker en ziet dat de wekker al lang af zou moeten zijn gegaan. Je beseft je dat je te laat bent en je draait jezelf om in je bed om door te slapen.
-        
-        Verslapen einde''')
-        exit()
-    elif avond in ["slapen", "bed", "sleep", "ga slapen"]:
-        print('Je wordt wakker gemaakt door je wekker je voelt je goed na een lange nachtrust. Je beseft je dat je al een tijd niet meer hebt gedoucht of in bad bent geweest.')
+    if avond in ["stream", "kijk stream", "ga stream", "bekijk stream"] + ["slapen", "bed", "sleep", "ga slapen"]:
         break
     else:
         print("Dit is geen geldig antwoord") 
+
+if avond in ["stream", "kijk stream", "ga stream", "bekijk stream"]:
+    print('''Je bekijkt de stream tot diep in de nacht totdat je van vermoeidheid in slaap viel. Je wordt met paniek wakker en schrikt op uit bed. je kijkt op je wekker en ziet dat de wekker al lang af zou moeten zijn gegaan. Je beseft je dat je te laat bent en je draait jezelf om in je bed om door te slapen.
+    
+    Verslapen einde''')
+    exit()
+elif avond in ["slapen", "bed", "sleep", "ga slapen"]:
+    print('Je wordt wakker gemaakt door je wekker je voelt je goed na een lange nachtrust. Je beseft je dat je al een tijd niet meer hebt gedoucht of in bad bent geweest.')
+
+
 
 while True:
     douchen = input("Je kan nu de keuze maken of je jezelf gelijk wilt aankleden of eerst nog even douchen.")
