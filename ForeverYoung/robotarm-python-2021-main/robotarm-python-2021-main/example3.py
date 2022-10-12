@@ -7,15 +7,16 @@ for i in range(5):
     for m in range(2):
         robotArm.moveRight()
     robotArm.drop()
-    for m in range(2):
-        robotArm.moveLeft()
-for i in range(2):
-    robotArm.moveRight()
+    if i < 4:    
+        for m in range(2):
+            robotArm.moveLeft()
+    
 for i in range(5):
     robotArm.grab()
     robotArm.moveLeft()
     robotArm.drop()
-    robotArm.moveRight()
+    if i < 4:
+        robotArm.moveRight()
 
 
 # Na jouw code wachten tot het sluiten van de window:

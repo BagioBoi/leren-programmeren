@@ -1,4 +1,9 @@
 #Kladblok
+# woord = input("Voer hier een woord in").lower()
+# woord2 = ""
+# for i in woord:
+#     woord2 = woord2 + i + i
+# print (woord2)
 
-for i in range(1,11):
-    print (i * 4)
+for i in ("Hallo", "Tap"):
+    print (i)
