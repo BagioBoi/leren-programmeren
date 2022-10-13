@@ -5,5 +5,10 @@
 #     woord2 = woord2 + i + i
 # print (woord2)
 
-for i in ("Hallo", "Tap"):
-    print (i)
+try:
+    if "Peer" > "Peper":
+        print("OK")
+    else:
+        print("NOK")
+except:
+    print("ERROR")
