@@ -1,14 +1,21 @@
 #Kladblok
+from random import randint
+herhaling = 0
+naam = input ("Wat is je naam: ")
+hoeveel_complimenten = int(input("Hoeveel complimenten wil je: "))
 
-while True:
-    vraag = input("Kan dit in een for loop?").lower
-    if vraag == "nee":
-        break
+for x in range(hoeveel_complimenten):
+    random_getal = randint(1, 4)
+    while random_getal == herhaling:
+        random_getal = randint(1, 4)
+    if random_getal == 1:
+        print(f"Je bent geweldig {naam}")
+    elif random_getal == 2:
+        print(f"Je bent de beste {naam}")
+    elif random_getal == 3:
+        print(f"Je bent super lief {naam}")
+    else:
+        print(f"Je bent super cool {naam}")
+    herhaling = random_getal
 
-for i in range (0, 5):
-    print("Goeie for loop hé")
-
-i = 0
-while i < 5:
-    print("Goeie while loop die op de for loop lijkt")
-    i += 1
+    
