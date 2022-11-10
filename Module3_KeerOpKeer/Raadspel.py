@@ -43,4 +43,3 @@ while total_rounds < rounds_input: #Voert de code uit wanneer die twee niet geli
     if end in ["nee","no", "n"]:
         break 
 print(f"Je totale score was {score}")
-    
