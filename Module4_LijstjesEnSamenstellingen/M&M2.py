@@ -1,5 +1,5 @@
 import random
-kleuren = ("groen", "blauw","oranje","bruin")
+kleuren = ("groen", "blauw","oranje","bruin", "geel")
 # hoeveel = int(input("hoeveel mms wil je?"))
 bowl ={} 
 while True:
@@ -13,7 +13,7 @@ while True:
 for kleur in kleuren:
     bowl[kleur] = 0
 
-for index in range(0, hoeveel):
+for x in range(0, hoeveel):
     randomnummer = random.randint (0,len(kleuren)- 1)
     bowl[kleuren[randomnummer]] += 1
 
