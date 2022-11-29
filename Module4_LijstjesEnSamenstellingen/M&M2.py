@@ -12,7 +12,7 @@ while True:
 
 for kleur in kleuren:
     bowl[kleur] = 0
-
+    
 for x in range(0, hoeveel):
     randomnummer = random.randint (0,len(kleuren)- 1)
     bowl[kleuren[randomnummer]] += 1

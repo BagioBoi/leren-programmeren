@@ -9,9 +9,10 @@ for x in kaartVorm:
 deck.append("JokerR")
 deck.append("JokerZ")
 random.shuffle(deck)
+print(deck[0:7])
 for x in range(7):
-    print(x + 1, deck[x])
-    deck.pop(x)
+    print(x + 1, deck[0])
+    deck.pop(0)
 print(deck)
 
 #Kaart toevoegen in deck na 7x 
