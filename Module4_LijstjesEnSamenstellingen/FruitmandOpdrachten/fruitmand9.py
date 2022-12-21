@@ -1,6 +1,10 @@
 from fruitmand import fruitmand
-del fruitmand[4]
+print (fruitmand[6])
+for fruit in fruitmand:
+        if fruit.get("name") == "druif":
+            fruitmand.remove(fruit)
 kleuren = []
+print(fruitmand)
 for kleur in range (len(fruitmand)):
     if fruitmand[kleur]['color'] not in kleuren:
         kleuren.append(fruitmand[kleur]['color'])
