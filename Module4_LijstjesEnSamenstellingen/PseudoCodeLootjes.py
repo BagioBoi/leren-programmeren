@@ -1,22 +1,25 @@
 #pseudo code lootjes
 #lijst1 []
-#shudlijst []
+#schudlijst []
 #dictionary{}
 
 # Start programma
+
 # herhaal
 #     naaminput
-#     naam wordt in lijsten gestopt
-#     niet unieke naam = error en terug naar naaminput
-#     vraag of ze nog een naam willen invoeren
-#         als ja terug naar naaminput
-#         als nee stopt met herhalen
+#     als naam niet uniek dan:
+#       naam zit al in de lijst
+#     anders 
+#       naam wordt in lijsten gestopt
+#     Als er 3 namen of meer in de lijst zitten dan:
+#       vraag of ze nog een naam willen invoeren
+#           als nee stopt met herhalen
 
 # herhaal
 #   schud de schudlijst door elkaar
-#   voor namen in de namenlijst
-#       als namenlijst niet gelijk is aan shufflelijst
-#           is namenlijst de key en shufflelijst de value
-#           anders terug naar herhaal
+#   voor elke naam in de namenlijst
+#       als de naam wel gelijk is aan schud
+#           terug naar herhaal
 
+# dan is namenlijst de key en schudlijst de value
 # print de namen met de lootjes

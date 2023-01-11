@@ -1,16 +1,29 @@
+from random import shuffle
 #LootjesTrekken
-namenLoop = True
 namenLijst = []
-shuffleNamenLijst = []
-
+lootjes = []
+namenLoop = True
 while namenLoop:
     naamInput = input("Wat is de naam die je wilt invoeren ")
-    namenLijst.append(naamInput)
-    shuffleNamenLijst.append(naamInput)
     if naamInput not in namenLijst:
+        namenLijst.append(naamInput)
+        lootjes.append(naamInput)
+    else:
+        print("Deze naam zit al in de lijst")
+    if (len(namenLijst)) > 2:
         herhaalVraag = input("Wil je nog een naam toevoegen ").lower()
-        if herhaalVraag == "ja":
-            namenLoop = True
-        else:
-            namenLijst = False
-print(namenLijst)
+        if herhaalVraag == "nee":
+            namenLoop = False
+
+schudden = True
+while schudden:
+    shuffle(lootjes)
+    schudden = False
+    for index in range(len(lootjes)):
+        if lootjes[index] == namenLijst[index]:
+            schudden = True
+
+getrokkenLootjes = {}
+for index in range(len(namenLijst)):
+    getrokkenLootjes.update({lootjes[index] : namenLijst[index]})
+print (getrokkenLootjes)
