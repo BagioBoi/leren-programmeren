@@ -1,15 +1,16 @@
-#hello.py
 
 # def helloWorld():
-#     print('Hello from function town')
+#     return('Hello from function town')
 
-# helloWorld()
+# print (helloWorld)
 
 # def helloFunction(teller):
+#     result = ""
 #     for x in range(teller):
-#         print(f"Hello from function town {x + 1}")
+#         result += f"Hello from function town {x + 1}\n"
+#     return result
 
-# helloFunction(6)
+# print (helloFunction(6))
 
 # def getLeeftijd(vraag: str) -> int:
 #     while True:
