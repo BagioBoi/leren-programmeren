@@ -1,0 +1,10 @@
+Planning week van 8/3/2023:
+
+Python:
+-Functie(s) van de updated game (af)maken en implementeren in mijn game.
+(Python ga ik op school doen.)
+
+Javascript:
+-Horeca opdracht proberen de lijst van items te laten zien (console of op de site zelf)
+*Als punt 1 is gelukt dan de prijzen hierbij toe te voegen.
+(Javascript zal ik thuis aan werken)
