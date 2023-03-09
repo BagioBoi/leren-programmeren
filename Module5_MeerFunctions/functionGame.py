@@ -3,6 +3,7 @@ from random import randint
 import random
 nameListMale = ["Noah", "Lucas", "Sem", "Daan", "Levi", "Liam", "James", "Finn", "Luca", "Milan"]
 nameListFemale = ["Julia", "Mila", "Emma", "Nora", "Olivia", "Sophie", "Tess", "Milou", "Zoë", "Yara"]
+dogListRaces = ["boxer","herdershond", "bloedhond", "husky", "chihuahua","dobermann", "dwergdashond", "spits", "bulldog", "golden retriever", "harrier", "setter", "labrador", "mopshond", "poedel", "shiba", "terrier", "kat"]
 points = 0
 
 def namegenerator():
@@ -41,3 +42,29 @@ def plankSquareM():
     else:
         print("Ohh helaas ik mag hopen dat we hier nog een beetje een normaal hondenhok van kunnen maken.")
     return points
+
+def dogInput():
+    score = 0
+    dog = input("Vul hier je hondenras in.").lower()
+    if dog in dogListRaces:
+        print("Goed gedaan je hebt het antwoord helemaal goed.")
+        dogListRaces.remove(dog)
+        score += 1
+    else:
+        print("Helaas deze heb je fout.")   
+    return score
+
+def knowledgeDog():
+    print("Zoals gezegd gaan we vragen of jij meerdere verschillende rassen van honden kent.\n!!!Letop land van afkomst hoeft er niet bij en je moet er minimaal 2 goed hebben!!!")
+    score = dogInput()
+    score += dogInput()
+    score += dogInput()
+    print (f"{score} van de 3 goed")
+    if score >= 2:
+        print("Je hebt de juiste kennis over honden rassen om dit hondenhok te bouwen.")
+        global points
+        points += 1
+    else:
+        print("Het zal moeilijk worden wanneer je een hondenhok bouwt voor zo'n 'kleine honde of een ENORM beest'.")
+    return points
+
