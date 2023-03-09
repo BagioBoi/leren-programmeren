@@ -68,3 +68,22 @@ def knowledgeDog():
         print("Het zal moeilijk worden wanneer je een hondenhok bouwt voor zo'n 'kleine honde of een ENORM beest'.")
     return points
 
+def motivated():
+    teller = 0
+    while teller < 13:
+        motivated = input("Ben je gemotiveerd om dit hondenhok te bouwen?:").lower()
+        if motivated == "ja":
+            teller += 1
+        else:
+            teller = 0
+    notMotivated = input("Ben je niet gemotiveerd om dit hondenhok te bouwen?:").lower()
+    if notMotivated == "nee":
+        print("Geweldig dit was de motivatie die nodig was om het hondenhok eenmaal neer te zetten.")
+        global points
+        points += 1
+    else:
+        print("Ik vind het zeer jammer dat je niet gemotiveerd bent om het hondenhok te maken.\nIk denk dat je maar beter opnieuw kan beginnen.")
+        points = -1
+    return points
+
+motivated()
