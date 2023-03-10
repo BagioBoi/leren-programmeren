@@ -16,10 +16,7 @@ Python:
 -En de functies zijn geimplementeerd in de game zelf
 
 HTML:
--Bootstrap afronden == Module 2 af
-
-Javascript:
--Horeca de lijst met items te laten zien in console of site zelf
+-Bootstrap afronden/vragen aan docent == Module 2 af 
 
 10/3/2023:
 

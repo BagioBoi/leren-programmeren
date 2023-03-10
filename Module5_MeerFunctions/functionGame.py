@@ -4,22 +4,22 @@ import random
 nameListMale = ["Noah", "Lucas", "Sem", "Daan", "Levi", "Liam", "James", "Finn", "Luca", "Milan"]
 nameListFemale = ["Julia", "Mila", "Emma", "Nora", "Olivia", "Sophie", "Tess", "Milou", "Zoë", "Yara"]
 dogListRaces = ["boxer","herdershond", "bloedhond", "husky", "chihuahua","dobermann", "dwergdashond", "spits", "bulldog", "golden retriever", "harrier", "setter", "labrador", "mopshond", "poedel", "shiba", "terrier", "kat"]
-points = 0
+
 
 def namegenerator():
     loop = True
-    genderInput = input("Bent u een man of een vrouw?: ").lower()
+    genderInput = input("Bent u een man of een vrouw?:").lower()
     while loop:
         if genderInput == "man":
             fakeNameInput = input("Wat is je naam?: ")
             name = random.choice(nameListMale)
-            namecheck = input(f"Is dit jouw naam {name}?: ").lower()
+            namecheck = input(f"Is dit jouw naam {name}?:").lower()
             if namecheck == "ja":
                 loop = False
         elif genderInput == "vrouw":
             fakeNameInput = input("Wat is je naam?: ")
             name = random.choice(nameListFemale)
-            namecheck = input(f"Is dit jouw naam {name}?: ").lower()
+            namecheck = input(f"Is dit jouw naam {name}?:").lower()
             if namecheck == "ja":
                 loop = False
         else:
@@ -27,17 +27,13 @@ def namegenerator():
             genderInput = input("Bent u nou een man of een vrouw?: ").lower()
     return name
 
-def plankSquareM():
+def plankSquareM(points):
     n1 = randint(1,9)
     n2 = randint(20,50)
     answer = n1 * n2
-    try:
-        answercheck = int(input(f"We hebben een plank van {n1} x {n2} nodig voor het hondenhok aan jouw de vraag hoe groot is deze plank?: "))
-    except:
-        print("Dat is geen nummer")
+    answercheck = int(input(f"We hebben een plank van {n1} x {n2} nodig voor het hondenhok aan jouw de vraag hoe groot is deze plank?:"))
     if answercheck == answer:
         print("Goed gedaan je hebt de juiste breedte en lengte van balk gekocht.")
-        global points
         points += 1
     else:
         print("Ohh helaas ik mag hopen dat we hier nog een beetje een normaal hondenhok van kunnen maken.")
@@ -45,7 +41,7 @@ def plankSquareM():
 
 def dogInput():
     score = 0
-    dog = input("Vul hier je hondenras in.").lower()
+    dog = input("Vul hier je hondenras in:").lower()
     if dog in dogListRaces:
         print("Goed gedaan je hebt het antwoord helemaal goed.")
         dogListRaces.remove(dog)
@@ -54,21 +50,20 @@ def dogInput():
         print("Helaas deze heb je fout.")   
     return score
 
-def knowledgeDog():
-    print("Zoals gezegd gaan we vragen of jij meerdere verschillende rassen van honden kent.\n!!!Letop land van afkomst hoeft er niet bij en je moet er minimaal 2 goed hebben!!!")
+def knowledgeDog(points):
+    print("Zoals gezegd gaan we vragen of jij meerdere verschillende rassen van honden kent.\n!!!Letop land van afkomst hoeft er niet bij en je moet ze allemaal goed hebben!!!")
     score = dogInput()
     score += dogInput()
     score += dogInput()
     print (f"{score} van de 3 goed")
-    if score >= 2:
+    if score == 3:
         print("Je hebt de juiste kennis over honden rassen om dit hondenhok te bouwen.")
-        global points
         points += 1
     else:
         print("Het zal moeilijk worden wanneer je een hondenhok bouwt voor zo'n 'kleine honde of een ENORM beest'.")
     return points
 
-def motivated():
+def motivated(points):
     teller = 0
     while teller < 13:
         motivated = input("Ben je gemotiveerd om dit hondenhok te bouwen?:").lower()
@@ -79,11 +74,8 @@ def motivated():
     notMotivated = input("Ben je niet gemotiveerd om dit hondenhok te bouwen?:").lower()
     if notMotivated == "nee":
         print("Geweldig dit was de motivatie die nodig was om het hondenhok eenmaal neer te zetten.")
-        global points
         points += 1
     else:
         print("Ik vind het zeer jammer dat je niet gemotiveerd bent om het hondenhok te maken.\nIk denk dat je maar beter opnieuw kan beginnen.")
-        points = -1
+        points = -10
     return points
-
-motivated()
