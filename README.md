@@ -1,3 +1,9 @@
-# Bami
+#10-3-2023
 
-Eerste verandering voor de opracht M01.PA
+#Python
+-Updated game is ingeleverd
+-Opdracht 1 van module 2 (Treasure hunt)
+
+#Html
+-CJV 3 (check na bootstrap en voor de meesterproef)
+-Begin gemaakt aan mijn portfolio/CV (weet nog niet wat de opdracht inhoud)
