@@ -46,7 +46,7 @@ def dogInput():
         print("Goed gedaan je hebt het antwoord helemaal goed.")
         dogListRaces.remove(dog)
         score += 1
-    else:
+    else: 
         print("Helaas deze heb je fout.")   
     return score
 

@@ -19,5 +19,3 @@ HTML:
 -Bootstrap afronden/vragen aan docent == Module 2 af 
 
 10/3/2023:
-
-

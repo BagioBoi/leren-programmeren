@@ -5,6 +5,8 @@ from data import JOURNEY_IN_DAYS
 ##################### M04.D02.O2 #####################
 
 def copper2silver(amount:int) -> float:
+    if amount == 10:
+        return 1
     pass
 
 def silver2gold(amount:int) -> float:
