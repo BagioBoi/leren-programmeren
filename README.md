@@ -1,3 +1,8 @@
+# 23/3/2023
+
+# Python
+- Treasure hunt tot CJV
+
 # 21/3/2023
 
 # Python
