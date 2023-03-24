@@ -1,6 +1,7 @@
 import time
+import math
 from termcolor import colored
-from data import JOURNEY_IN_DAYS
+from data import JOURNEY_IN_DAYS, COST_FOOD_HORSE_COPPER_PER_DAY, COST_FOOD_HUMAN_COPPER_PER_DAY, COST_TENT_GOLD_PER_WEEK, COST_HORSE_SILVER_PER_DAY
 
 ##################### M04.D02.O2 #####################
 
@@ -31,40 +32,65 @@ def getPersonCashInGold(personCash:dict) -> float:
 ##################### M04.D02.O4 #####################
 
 def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
-    pass
-
+    journeyCost = ((COST_FOOD_HUMAN_COPPER_PER_DAY * people) + (COST_FOOD_HORSE_COPPER_PER_DAY * horses)) * JOURNEY_IN_DAYS
+    return round(copper2gold(journeyCost),2)
 ##################### M04.D02.O5 #####################
-
+# key 'round' value True
+# if element[key] == True
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
-    pass
-
+    newList = []
+    for element in list:
+        if element[key] == value:
+            newList.append(element)
+    return newList
+ 
 def getAdventuringPeople(people:list) -> list:
-    pass
+    return getFromListByKeyIs(people, "adventuring", True)
 
 def getShareWithFriends(friends:list) -> int:
-    pass
+    return getFromListByKeyIs(friends, "shareWith", True)
 
 def getAdventuringFriends(friends:list) -> list:
-    pass
+    list = getShareWithFriends(friends)
+    list = getAdventuringPeople(list)
+    return list
 
 ##################### M04.D02.O6 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
-    pass
+    horses = (math.ceil(people /2))
+    return horses
 
 def getNumberOfTentsNeeded(people:int) -> int:
-    pass
+    tents = (math.ceil(people /3))
+    return tents
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
-    pass
+    horseCostS = (COST_HORSE_SILVER_PER_DAY * horses) * JOURNEY_IN_DAYS
+    tentCost = (COST_TENT_GOLD_PER_WEEK * tents) * math.ceil(JOURNEY_IN_DAYS/7)
+    return tentCost + silver2gold(horseCostS)
 
 ##################### M04.D02.O7 #####################
 
 def getItemsAsText(items:list) -> str:
-    pass
+    newList = []
+    for item in items:
+        itemtxt = f"{item['amount']}{item['unit']} {item['name']}"
+        newList.append(itemtxt)
+    return ', '.join(newList)
 
 def getItemsValueInGold(items:list) -> float:
-    pass
+    totalGold = 0
+    for item in items:
+        if item["price"]["type"] == "copper":
+            totalGold += copper2gold(item["price"]["amount"] * item["amount"])
+        elif item["price"]["type"] == "silver":
+            totalGold += silver2gold(item["price"]["amount"] * item["amount"])
+        elif item["price"]["type"] == "gold":
+            totalGold += item["price"]["amount"] * item["amount"]
+        elif item["price"]["type"] == "platinum":
+            totalGold += platinum2gold(item["price"]["amount"] * item["amount"])
+    return totalGold
 
 ##################### M04.D02.O8 #####################
 
