@@ -12,7 +12,8 @@ def silver2gold(amount:int) -> float:
     return amount/5
 
 def copper2gold(amount:int) -> float:
-    return amount/50
+    #return amount/50
+    return silver2gold(copper2silver(amount))
 
 def platinum2gold(amount:int) -> float:
     return amount*25
@@ -95,7 +96,13 @@ def getItemsValueInGold(items:list) -> float:
 ##################### M04.D02.O8 #####################
 
 def getCashInGoldFromPeople(people:list) -> float:
-    pass
+    totalGold = 0
+    for element in people:
+        totalGold += copper2gold(element["cash"]["copper"])
+        totalGold += silver2gold(element["cash"]["silver"])
+        totalGold += (element["cash"]["gold"])
+        totalGold += platinum2gold(element["cash"]["platinum"])
+    return round(totalGold,2)
 
 ##################### M04.D02.O9 #####################
 
