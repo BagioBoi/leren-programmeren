@@ -1,3 +1,10 @@
+# Weekplanning 4/4/2023
+
+# 3 opdrachten voor volgende week
+- Python tot de meesterproef (ijswinkel)
+- HTML CV/portfolio 
+- Javascript horeca afmaken
+
 # 23/3/2023
 
 # Python
